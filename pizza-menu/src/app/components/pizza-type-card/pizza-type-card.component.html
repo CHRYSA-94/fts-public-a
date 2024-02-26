@@ -1,0 +1,28 @@
+<mat-expansion-panel hideToggle (opened)="panelOpenState = true"
+(closed)="panelOpenState = false"
+[ngClass]="{'blue-bg': panelOpenState}">
+    <mat-panel-description>
+      </mat-panel-description>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon aria-label="Expand more icon" [fontIcon]="panelOpenState? 'expand_more' : 'expand_less'" class="expand-icon"></mat-icon>
+        {{type?.name}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+        <div class="content-container">
+            <section class="size-price-container" [formGroup]="pizzaTypeForm">
+                <ng-container *ngFor="let size of allSizes">
+                    <div class="size-price-item" [formGroupName]="size.name.toLocaleLowerCase()">
+                        <mat-checkbox color="primary" formControlName="isSelected"></mat-checkbox>
+                        <p class="size-name">{{size.name}}</p>
+                        <app-custom-input-field [control]="price(size.name)"  [isSelected]="isSelected(size.name)"></app-custom-input-field>
+                    </div>
+                </ng-container>
+            </section>
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a home icon" (click)="onStateRevert()">
+              <mat-icon>undo</mat-icon>
+            </button>
+        </div>
+  </mat-expansion-panel>
+
+

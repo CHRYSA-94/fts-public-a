@@ -1,0 +1,9 @@
+<mat-accordion>
+  <ng-container *ngFor="let item of pizzaTypesList">
+    <app-pizza-type-card
+      [type]="item"
+      [itemId]="item.itemId"
+      [prices]="getPriceById(item.itemId)"
+    ></app-pizza-type-card>
+  </ng-container>
+</mat-accordion>

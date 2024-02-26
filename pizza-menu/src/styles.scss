@@ -1,0 +1,14 @@
+@import './app/theming/custom-theme.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+//material styles
+
+.mdc-checkbox__background {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 6px !important;
+  transform: translate(-5px, -5px);
+}

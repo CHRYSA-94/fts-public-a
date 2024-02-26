@@ -1,0 +1,40 @@
+:host {
+  .mat-expansion-panel-header-title {
+    font-size: 20px;
+  }
+
+  .expand-icon {
+    margin-right: 15px;
+  }
+
+  .blue-bg {
+    background-color: rgb(216, 231, 243);
+  }
+
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 30px;
+
+    .size-price {
+      &-container {
+        display: flex;
+      }
+
+      &-item {
+        width: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 35px;
+
+        .size-name {
+          font-size: 19px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

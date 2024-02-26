@@ -1,0 +1,29 @@
+.input-container {
+  display: flex;
+  height: 45px;
+  width: 110px;
+  overflow: hidden;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+
+  .dollar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 1px 12px;
+  }
+
+  .input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+  }
+}
